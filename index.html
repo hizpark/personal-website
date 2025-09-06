@@ -5,34 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Harper 的个人主页 - 全栈工程师 | 项目展示"
+      content="Harper 的个人主页 - 全栈工程师，专注于 Vue, React, PHP, Node.js，展示项目经验与开源成果。"
     />
-    <title>Harper - 全栈工程师</title>
+    <title>Harper - 全栈工程师 | Vue · React · PHP · Node.js</title>
 
     <!-- JSON-LD 结构化数据 -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Harper",
-        "jobTitle": "Full Stack Developer",
-        "url": "https://github.com/hizpark/personal-website/",
-        "sameAs": [
-          "https://github.com/hizpark",
-          "https://www.linkedin.com/in/harperjang/",
-          "https://www.youtube.com/channel/UChLHp6HaQmqRss9zV-ljYPA"
-        ],
-        "email": "mailto:harper.jang@outlook.com",
-        "knowsAbout": [
-          "Vue.js",
-          "React",
-          "PHP",
-          "Node.js",
-          "Go",
-          "MySQL",
-          "SQLite",
-          "Docker",
-          "CI/CD"
+        "@graph": [
+          {
+            "@type": "Person",
+            "name": "Harper",
+            "jobTitle": "Full Stack Developer",
+            "url": "https://hizpark.com",
+            "sameAs": [
+              "https://github.com/hizpark",
+              "https://www.linkedin.com/in/harperjang/",
+              "https://www.youtube.com/@FullstackNotes"
+            ],
+            "email": "mailto:harper.jang@outlook.com",
+            "knowsAbout": [
+              "Vue.js",
+              "React",
+              "PHP",
+              "Node.js",
+              "Go",
+              "MySQL",
+              "SQLite",
+              "Docker",
+              "CI/CD"
+            ]
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "name": "hizpark/pps",
+            "url": "https://packagist.org/packages/hizpark/pps",
+            "programmingLanguage": "PHP",
+            "description": "PHP Project Scaffold – minimal and ready to code"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "name": "hizpark/paginator",
+            "url": "https://packagist.org/packages/hizpark/paginator",
+            "programmingLanguage": "PHP",
+            "description": "Flexible pagination utility for PHP applications"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "name": "hizpark/crawler",
+            "url": "https://packagist.org/packages/hizpark/crawler",
+            "programmingLanguage": "PHP",
+            "description": "Effortless recursive web crawling for comprehensive site indexing"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "name": "hizpark/zip-mover",
+            "url": "https://packagist.org/packages/hizpark/zip-mover",
+            "programmingLanguage": "PHP",
+            "description": "Simple and reliable PHP utility for compressing and extracting a ZIP file"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "name": "hizpark/directory-tree",
+            "url": "https://packagist.org/packages/hizpark/directory-tree",
+            "programmingLanguage": "PHP",
+            "description": "Elegantly transform directory structures into traversable tree objects"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "name": "hizpark/file-uploader",
+            "url": "https://packagist.org/packages/hizpark/file-uploader",
+            "programmingLanguage": "PHP",
+            "description": "A flexible, decoupled file upload library with customizable validation and scoped storage management"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "name": "hizpark/scoped-storage-strategy",
+            "url": "https://packagist.org/packages/hizpark/scoped-storage-strategy",
+            "programmingLanguage": "PHP",
+            "description": "Flexible and pluggable storage strategy for managing scoped, temporary key-value data"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "name": "hizpark/validation-interface",
+            "url": "https://packagist.org/packages/hizpark/validation-interface",
+            "programmingLanguage": "PHP",
+            "description": "Unified, testable, and extensible validation for any PHP project"
+          }
         ]
       }
     </script>
@@ -81,7 +141,7 @@
   <body>
     <header>
       <h1>Harper</h1>
-      <p>全栈工程师 | 自由职业 / 远程工作</p>
+      <p>全栈工程师 | Vue · React · PHP · Node.js</p>
     </header>
 
     <section id="skills">
@@ -90,7 +150,7 @@
         <li>前端：Vue, React, HTML5, CSS3, JavaScript</li>
         <li>后端：PHP, Node.js, Go</li>
         <li>数据库：MySQL, SQLite</li>
-        <li>工具：Git, Docker, CI/CD</li>
+        <li>工具 / DevOps：Git, Docker, CI/CD</li>
       </ul>
     </section>
 
@@ -99,6 +159,7 @@
 
       <article>
         <h3>Todo List</h3>
+        <p>任务管理应用，支持任务增删改查。</p>
         <ul>
           <li>
             API 规范:
@@ -123,6 +184,7 @@
 
       <article>
         <h3>博客</h3>
+        <p>个人博客系统，支持文章发布与评论功能。</p>
         <ul>
           <li>
             API 规范:
@@ -225,76 +287,12 @@
       </ul>
     </section>
 
-    <!-- JSON-LD 结构化数据 -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/pps",
-            "url": "https://packagist.org/packages/hizpark/pps",
-            "programmingLanguage": "PHP",
-            "description": "PHP Project Scaffold – minimal and ready to code"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/paginator",
-            "url": "https://packagist.org/packages/hizpark/paginator",
-            "programmingLanguage": "PHP",
-            "description": "Flexible pagination utility for PHP applications"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/crawler",
-            "url": "https://packagist.org/packages/hizpark/crawler",
-            "programmingLanguage": "PHP",
-            "description": "Effortless recursive web crawling for comprehensive site indexing"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/zip-mover",
-            "url": "https://packagist.org/packages/hizpark/zip-mover",
-            "programmingLanguage": "PHP",
-            "description": "Simple and reliable PHP utility for compressing and extracting a ZIP file"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/directory-tree",
-            "url": "https://packagist.org/packages/hizpark/directory-tree",
-            "programmingLanguage": "PHP",
-            "description": "Elegantly transform directory structures into traversable tree objects"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/file-uploader",
-            "url": "https://packagist.org/packages/hizpark/file-uploader",
-            "programmingLanguage": "PHP",
-            "description": "A flexible, decoupled file upload library with customizable validation and scoped storage management"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/scoped-storage-strategy",
-            "url": "https://packagist.org/packages/hizpark/scoped-storage-strategy",
-            "programmingLanguage": "PHP",
-            "description": "Flexible and pluggable storage strategy for managing scoped, temporary key-value data"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/validation-interface",
-            "url": "https://packagist.org/packages/hizpark/validation-interface",
-            "programmingLanguage": "PHP",
-            "description": "Unified, testable, and extensible validation for any PHP project"
-          }
-        ]
-      }
-    </script>
-
     <section id="about">
       <h2>关于我</h2>
       <p>
         我是一名全栈工程师，目前专注于 Vue / React 前端开发和 Node / PHP
-        后端实现。目标是自由职业或远程工作，喜欢通过项目实战不断提升技能。
+        后端实现。具备独立完成项目从前端到后端的能力，熟悉数据库和 DevOps
+        流程，持续通过实战项目提升技术水平。
       </p>
     </section>
 
