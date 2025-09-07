@@ -105,20 +105,15 @@
         margin: 0;
       }
 
-      #contact li,
-      #skills li {
+      #skills li,
+      #contact li {
         margin: 6px 0;
         font-size: 1.05em;
       }
 
       /* Contact 对齐 */
-      #contact li {
-        display: flex;
-        gap: 10px;
-      }
+      #skills li .label,
       #contact li .label {
-        width: 6ch;
-        flex-shrink: 0;
         font-weight: bold;
       }
 
@@ -300,10 +295,15 @@
       </div>
       <hr class="section-hr" />
       <ul>
-        <li>Frontend: Vue, React, HTML5, CSS3, JavaScript</li>
-        <li>Backend: PHP, Node.js, Go</li>
-        <li>Database: MySQL, SQLite</li>
-        <li>Tools / DevOps: Git, Docker, CI/CD</li>
+        <li>
+          <span class="label">Frontend:</span>
+          <span>Vue, React, HTML5, CSS3, JavaScript</span>
+        </li>
+        <li>
+          <span class="label">Backend:</span> <span>PHP, Node.js, Go</span>
+        </li>
+        <li><span class="label">Database:</span> <span>MySQL, SQLite</span></li>
+        <li><span class="label">DevOps:</span> <span>Docker, CI/CD</span></li>
       </ul>
     </section>
 
