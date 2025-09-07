@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Harper 的个人主页 - 全栈工程师，专注于 Vue, React, PHP, Node.js，展示项目经验与开源成果。"
+      content="Harper 的个人主页 - Full Stack Developer, 专注于 Vue, React, PHP, Node.js，展示项目经验与开源成果。"
     />
-    <title>Harper - 全栈工程师 | Vue · React · PHP · Node.js</title>
+    <title>Harper - Full Stack Developer | Vue · React · PHP · Node.js</title>
 
     <!-- JSON-LD 结构化数据 -->
     <script type="application/ld+json">
@@ -21,8 +21,7 @@
             "url": "https://hizpark.com",
             "sameAs": [
               "https://github.com/hizpark",
-              "https://www.linkedin.com/in/harperjang/",
-              "https://www.youtube.com/@FullstackNotes"
+              "https://www.linkedin.com/in/harperjang/"
             ],
             "email": "mailto:harper.jang@outlook.com",
             "knowsAbout": [
@@ -36,94 +35,56 @@
               "Docker",
               "CI/CD"
             ]
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/pps",
-            "url": "https://packagist.org/packages/hizpark/pps",
-            "programmingLanguage": "PHP",
-            "description": "PHP Project Scaffold – minimal and ready to code"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/paginator",
-            "url": "https://packagist.org/packages/hizpark/paginator",
-            "programmingLanguage": "PHP",
-            "description": "Flexible pagination utility for PHP applications"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/crawler",
-            "url": "https://packagist.org/packages/hizpark/crawler",
-            "programmingLanguage": "PHP",
-            "description": "Effortless recursive web crawling for comprehensive site indexing"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/zip-mover",
-            "url": "https://packagist.org/packages/hizpark/zip-mover",
-            "programmingLanguage": "PHP",
-            "description": "Simple and reliable PHP utility for compressing and extracting a ZIP file"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/directory-tree",
-            "url": "https://packagist.org/packages/hizpark/directory-tree",
-            "programmingLanguage": "PHP",
-            "description": "Elegantly transform directory structures into traversable tree objects"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/file-uploader",
-            "url": "https://packagist.org/packages/hizpark/file-uploader",
-            "programmingLanguage": "PHP",
-            "description": "A flexible, decoupled file upload library with customizable validation and scoped storage management"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/scoped-storage-strategy",
-            "url": "https://packagist.org/packages/hizpark/scoped-storage-strategy",
-            "programmingLanguage": "PHP",
-            "description": "Flexible and pluggable storage strategy for managing scoped, temporary key-value data"
-          },
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "hizpark/validation-interface",
-            "url": "https://packagist.org/packages/hizpark/validation-interface",
-            "programmingLanguage": "PHP",
-            "description": "Unified, testable, and extensible validation for any PHP project"
           }
         ]
       }
     </script>
 
     <style>
+      /* ==== 全局等宽字体 ==== */
       body {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "Courier New", Courier, monospace;
         line-height: 1.6;
         margin: 0;
         padding: 0 20px;
         background-color: #f9f9f9;
         color: #333;
+        font-size: 16px;
       }
+
       header,
       section,
       footer {
         max-width: 900px;
-        margin: 20px auto;
+        margin: 20px auto 40px;
         padding: 20px;
         background: #fff;
         border-radius: 8px;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
       }
-      h1,
-      h2,
-      h3 {
+
+      /* ==== 标题颜色微调 ==== */
+      h1 {
+        font-size: 2.2em;
+        font-weight: bold;
         margin-top: 0;
+        color: #111f3f;
       }
-      ul {
-        padding-left: 20px;
+
+      h2 {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-top: 0;
+        color: inherit;
       }
+
+      h3 {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-top: 0;
+        color: #444;
+      }
+
       a {
         color: #1a73e8;
         text-decoration: none;
@@ -131,176 +92,406 @@
       a:hover {
         text-decoration: underline;
       }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      /* 列表优化 */
+      #contact ul,
+      #skills ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #contact li,
+      #skills li {
+        margin: 6px 0;
+        font-size: 1.05em;
+      }
+
+      /* Contact 对齐 */
+      #contact li {
+        display: flex;
+        gap: 10px;
+      }
+      #contact li .label {
+        width: 6ch;
+        flex-shrink: 0;
+        font-weight: bold;
+      }
+
+      /* 核心 Grid 布局，最多两列 */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 16px;
+        align-items: stretch;
+      }
+
+      /* 卡片样式 */
+      .card {
+        background: #f5f5f5;
+        padding: 16px;
+        border-radius: 6px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card h3 {
+        margin-top: 0;
+      }
+
+      .card p {
+        margin: 8px 0 0;
+        flex-grow: 1;
+      }
+
       footer {
         text-align: center;
         font-size: 0.9em;
         color: #777;
+        padding: 20px; /* 保留和 header/section 一致的 padding */
+        padding-bottom: 40px; /* 单独加大底部间距 */
+        border-top: 1px dashed rgba(0, 0, 0, 0.1);
+      }
+
+      .demo-credentials {
+        margin-bottom: 20px;
+        font-size: 0.95em;
+      }
+
+      /* Section Header 统一样式 */
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin-bottom: 4px;
+      }
+      .section-header h2 {
+        margin: 0;
+        flex-shrink: 1;
+      }
+
+      .section-hr {
+        border: none;
+        border-top: 1px dashed rgba(0, 0, 0, 0.1);
+        margin: 2px 0 20px 0;
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ==== 社交图标 ==== */
+      .social-links {
+        display: flex;
+        gap: 12px; /* 图标间距 */
+        margin-top: 4px; /* 与标题分开 */
+        /* 使用 align-items: baseline 让图标与文本基线对齐 */
+        align-items: baseline;
+      }
+
+      .social-links img {
+        width: 24px;
+        height: 24px;
+        display: inline-block; /* 保持 baseline 对齐 */
+      }
+
+      .social-links a img {
+        transition: transform 0.2s ease, filter 0.2s ease;
+      }
+
+      /* hover 效果：放大 + 颜色变亮 */
+      .social-links a:hover img {
+        transform: scale(1.2); /* 放大 20% */
+        filter: brightness(1.2); /* 亮度增加 20% */
+      }
+
+      /* ==== 统一按钮样式 ==== */
+      .btn-link {
+        display: inline-block;
+        padding: 6px 12px;
+        font-weight: bold;
+        font-size: 0.95em;
+        color: #1a73e8;
+        text-decoration: none;
+        border-radius: 4px;
+        background-color: rgba(26, 115, 232, 0.1);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.2s, color 0.2s;
+        white-space: nowrap;
+        flex-grow: 0;
+        align-self: flex-start;
+      }
+      .btn-link:hover {
+        background-color: rgba(26, 115, 232, 0.25);
+        color: #0d47a1;
+        text-decoration: none;
+      }
+      .btn-link::after {
+        content: " →";
+        margin-left: 4px;
+        font-weight: bold;
+      }
+      .btn-demo {
+        margin-top: 10px;
       }
     </style>
   </head>
+
   <body>
+    <!-- Header -->
     <header>
       <h1>Harper</h1>
-      <p>全栈工程师 | Vue · React · PHP · Node.js</p>
+      <p>Full Stack Developer | Vue · React · PHP · Node.js</p>
+      <div class="social-links">
+        <a
+          href="https://github.com/hizpark"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"
+            alt="GitHub"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/harperjang/"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+            alt="LinkedIn"
+          />
+        </a>
+      </div>
     </header>
 
-    <section id="skills">
-      <h2>技能</h2>
-      <ul>
-        <li>前端：Vue, React, HTML5, CSS3, JavaScript</li>
-        <li>后端：PHP, Node.js, Go</li>
-        <li>数据库：MySQL, SQLite</li>
-        <li>工具 / DevOps：Git, Docker, CI/CD</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>项目</h2>
-
-      <article>
-        <h3>CMS</h3>
-        <p>通用的内容管理平台，支持页面、文章、分类、用户等模块的管理。</p>
-        <p>
-          演示地址：
-          <a href="https://cms.hizpark.com/wms" target="_blank">查看演示</a>
-        </p>
-      </article>
-
-      <article>
-        <h3>Todo List</h3>
-        <p>任务管理应用，支持任务增删改查。</p>
-        <p>
-          演示地址：
-          <a href="https://todo.hizpark.com" target="_blank">查看演示</a>
-        </p>
-      </article>
-
-      <article>
-        <h3>博客</h3>
-        <p>个人博客系统，支持文章发布与评论功能。</p>
-        <p>
-          演示地址：
-          <a href="https://blog.hizpark.com" target="_blank">查看演示</a>
-        </p>
-      </article>
-    </section>
-
-    <section id="opensource-packages">
-      <h2>开源 PHP 包</h2>
-      <ul>
-        <li>
-          <a href="https://packagist.org/packages/hizpark/pps" target="_blank">
-            hizpark/pps
-          </a>
-          – PHP Project Scaffold – minimal and ready to code
-        </li>
-        <li>
-          <a
-            href="https://packagist.org/packages/hizpark/paginator"
-            target="_blank"
-          >
-            hizpark/paginator
-          </a>
-          – Flexible pagination utility for PHP applications
-        </li>
-        <li>
-          <a
-            href="https://packagist.org/packages/hizpark/crawler"
-            target="_blank"
-          >
-            hizpark/crawler
-          </a>
-          – Effortless recursive web crawling for comprehensive site indexing
-        </li>
-        <li>
-          <a
-            href="https://packagist.org/packages/hizpark/zip-mover"
-            target="_blank"
-          >
-            hizpark/zip-mover
-          </a>
-          – Simple and reliable PHP utility for compressing and extracting a ZIP
-          file
-        </li>
-        <li>
-          <a
-            href="https://packagist.org/packages/hizpark/directory-tree"
-            target="_blank"
-          >
-            hizpark/directory-tree
-          </a>
-          – Elegantly transform directory structures into traversable tree
-          objects
-        </li>
-        <li>
-          <a
-            href="https://packagist.org/packages/hizpark/file-uploader"
-            target="_blank"
-          >
-            hizpark/file-uploader
-          </a>
-          – A flexible, decoupled file upload library with customizable
-          validation and scoped storage management
-        </li>
-        <li>
-          <a
-            href="https://packagist.org/packages/hizpark/scoped-storage-strategy"
-            target="_blank"
-          >
-            hizpark/scoped-storage-strategy
-          </a>
-          – Flexible and pluggable storage strategy for managing scoped,
-          temporary key-value data
-        </li>
-        <li>
-          <a
-            href="https://packagist.org/packages/hizpark/validation-interface"
-            target="_blank"
-          >
-            hizpark/validation-interface
-          </a>
-          – Unified, testable, and extensible validation for any PHP project
-        </li>
-      </ul>
-    </section>
-
+    <!-- About -->
     <section id="about">
-      <h2>关于我</h2>
+      <div class="section-header">
+        <h2>About</h2>
+      </div>
+      <hr class="section-hr" />
       <p>
-        我是一名全栈工程师，目前专注于 Vue / React 前端开发和 Node / PHP
-        后端实现。具备独立完成项目从前端到后端的能力，熟悉数据库和 DevOps
-        流程，持续通过实战项目提升技术水平。
+        I am a full stack developer, currently focusing on Vue / React frontend
+        development and Node / PHP backend implementation. I am capable of
+        handling projects end-to-end, familiar with databases and DevOps
+        workflows, and proficient in website development and construction with
+        extensive commercial experience. I continuously improve my skills
+        through hands-on projects.
       </p>
     </section>
 
+    <!-- Skills -->
+    <section id="skills">
+      <div class="section-header">
+        <h2>Skills</h2>
+      </div>
+      <hr class="section-hr" />
+      <ul>
+        <li>Frontend: Vue, React, HTML5, CSS3, JavaScript</li>
+        <li>Backend: PHP, Node.js, Go</li>
+        <li>Database: MySQL, SQLite</li>
+        <li>Tools / DevOps: Git, Docker, CI/CD</li>
+      </ul>
+    </section>
+
+    <!-- Composer Packages -->
+    <section id="composer-packages">
+      <div class="section-header">
+        <h2>Composer Packages</h2>
+      </div>
+      <hr class="section-hr" />
+      <div class="grid">
+        <div class="card">
+          <a href="https://packagist.org/packages/hizpark/pps" target="_blank"
+            >hizpark/pps</a
+          >
+          <p>PHP Project Scaffold – minimal and ready to code</p>
+        </div>
+        <div class="card">
+          <a
+            href="https://packagist.org/packages/hizpark/paginator"
+            target="_blank"
+            >hizpark/paginator</a
+          >
+          <p>Flexible pagination utility for PHP applications</p>
+        </div>
+        <div class="card">
+          <a
+            href="https://packagist.org/packages/hizpark/zip-mover"
+            target="_blank"
+            >hizpark/zip-mover</a
+          >
+          <p>
+            Simple and reliable PHP utility for compressing and extracting a ZIP
+            file
+          </p>
+        </div>
+        <div class="card">
+          <a
+            href="https://packagist.org/packages/hizpark/directory-tree"
+            target="_blank"
+            >hizpark/directory-tree</a
+          >
+          <p>
+            Elegantly transform directory structures into traversable tree
+            objects
+          </p>
+        </div>
+        <div class="card">
+          <a
+            href="https://packagist.org/packages/hizpark/file-uploader"
+            target="_blank"
+            >hizpark/file-uploader</a
+          >
+          <p>
+            Flexible, decoupled file upload library with customizable validation
+            and scoped storage management
+          </p>
+        </div>
+        <div class="card">
+          <a
+            href="https://packagist.org/packages/hizpark/scoped-storage-strategy"
+            target="_blank"
+            >hizpark/scoped-storage-strategy</a
+          >
+          <p>
+            Flexible and pluggable storage strategy for managing scoped,
+            temporary key-value data
+          </p>
+        </div>
+        <div class="card">
+          <a
+            href="https://packagist.org/packages/hizpark/validation-interface"
+            target="_blank"
+            >hizpark/validation-interface</a
+          >
+          <p>
+            Unified, testable, and extensible validation for any PHP project
+          </p>
+        </div>
+        <div class="card">
+          <a
+            href="https://packagist.org/packages/hizpark/crawler"
+            target="_blank"
+            >hizpark/crawler</a
+          >
+          <p>
+            Effortless recursive web crawling for comprehensive site indexing
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Projects -->
+    <section id="projects">
+      <div class="section-header">
+        <h2>Personal Projects</h2>
+      </div>
+      <hr class="section-hr" />
+      <div class="grid">
+        <div class="card">
+          <h3>CMS</h3>
+          <p>
+            General content management system, supporting pages, articles,
+            categories, and user management.
+          </p>
+          <a
+            href="https://cms.hizpark.com/wms"
+            target="_blank"
+            class="btn-link btn-demo"
+            >View Demo</a
+          >
+        </div>
+        <div class="card">
+          <h3>Blog</h3>
+          <p>
+            Personal blog system with post publishing and commenting features.
+          </p>
+          <a
+            href="https://blog.hizpark.com"
+            target="_blank"
+            class="btn-link btn-demo"
+            >View Demo</a
+          >
+        </div>
+        <div class="card">
+          <h3>Todo List</h3>
+          <p>
+            Task management app supporting create, read, update, and delete
+            operations.
+          </p>
+          <a
+            href="https://todo.hizpark.com"
+            target="_blank"
+            class="btn-link btn-demo"
+            >View Demo</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Cases -->
+    <section id="portfolio">
+      <div class="section-header">
+        <h2>Portfolio Cases</h2>
+        <!-- <a href="portfolio.html" class="btn-link" target="_blank">View More</a> -->
+      </div>
+      <hr class="section-hr" />
+      <p>
+        Selected website projects and client work showcasing practical
+        experience and expertise in web development.
+      </p>
+      <p class="demo-credentials">
+        <strong>Demo Access:</strong> Username: <code>demo</code>, Password:
+        <code>123456</code>
+      </p>
+      <div class="grid">
+        <div class="card">
+          <a href="https://b50101-klnwcity.hizpark.com" target="_blank"
+            >b50101-klnwcity</a
+          >
+          <small>Jan 2025</small>
+        </div>
+        <div class="card">
+          <a href="https://b50102-koolcar.hizpark.com" target="_blank"
+            >b50102-koolcar</a
+          >
+          <small>Jan 2025</small>
+        </div>
+        <div class="card">
+          <a href="https://b50201-hkclr.hizpark.com" target="_blank"
+            >b50201-hkclr</a
+          >
+          <small>Feb 2025</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact">
-      <h2>联系方式</h2>
+      <h2>Contact</h2>
       <ul>
         <li>
-          Email:
+          <span class="label">Email:</span>
           <a href="mailto:harper.jang@outlook.com">harper.jang@outlook.com</a>
-        </li>
-        <li>
-          GitHub:
-          <a href="https://github.com/hizpark" target="_blank"
-            >github.com/hizpark</a
-          >
-        </li>
-        <li>
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/harperjang/" target="_blank"
-            >linkedin.com/in/harperjang/</a
-          >
-        </li>
-        <li>
-          YouTube:
-          <a href="https://www.youtube.com/@FullstackNotes" target="_blank"
-            >www.youtube.com/@FullstackNotes</a
-          >
         </li>
       </ul>
     </section>
 
+    <!-- Footer -->
     <footer>
       <p>&copy; 2025 Harper. All rights reserved.</p>
     </footer>
