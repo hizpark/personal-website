@@ -47,8 +47,8 @@
           "Helvetica Neue", Arial, sans-serif;
         line-height: 1.6;
         margin: 0;
-        padding: 0 20px;
-        background-color: #f9f9f9;
+        padding: 0 1.25rem; /* 20px -> 1.25rem */
+        background-color: #f3f3f3;
         color: #333;
         font-size: 16px;
       }
@@ -56,40 +56,46 @@
       header,
       section,
       footer {
-        max-width: 900px;
-        margin: 20px auto 40px;
-        padding: 20px;
+        max-width: 56.25rem; /* 900px -> 56.25rem */
+        margin: 1.25rem auto 2.5rem; /* 20px 40px -> 1.25rem 2.5rem */
+        padding: 1.25rem; /* 20px -> 1.25rem */
         background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+        border-radius: 0.5rem;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
       }
 
       header p {
-        font-size: 1em; /* 根据需要微调 */
-        line-height: 1.4; /* 让文本紧凑但不拥挤 */
-        margin-top: 4px; /* 和 h1 保持合理间距 */
+        font-size: 1em;
+        line-height: 1.4;
+        margin-top: 0.3125rem; /* 5px -> 0.3125rem */
       }
 
       /* ==== 标题颜色微调 ==== */
       h1 {
-        font-size: 2.2em;
+        font-size: 2em;
         font-weight: bold;
         margin-top: 0;
         color: #111f3f;
       }
 
       h2 {
-        font-size: 1.5em;
+        font-size: 1.75em;
         font-weight: bold;
         margin-top: 0;
         color: inherit;
       }
 
       h3 {
-        font-size: 1.2em;
+        font-size: 1.5em;
         font-weight: bold;
-        margin-top: 0;
         color: #444;
+      }
+
+      h4 {
+        font-size: 1.25em;
+        font-weight: bold;
+        color: #444;
+        margin: 0;
       }
 
       a {
@@ -101,7 +107,7 @@
       }
 
       ul {
-        padding-left: 20px;
+        padding-left: 1.25rem; /* 20px -> 1.25rem */
       }
 
       /* 列表优化 */
@@ -114,7 +120,7 @@
 
       #skills li,
       #contact li {
-        margin: 6px 0;
+        margin: 0.5rem 0;
         font-size: 1.05em;
         font-family: "Courier New", Courier, monospace;
       }
@@ -128,28 +134,30 @@
       /* 核心 Grid 布局，最多两列 */
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 16px;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(21.875rem, 1fr)
+        ); /* 350px -> 21.875rem */
+        gap: 1rem;
         align-items: stretch;
       }
 
       /* 卡片样式 */
       .card {
-        background: #f5f5f5;
-        padding: 16px;
-        border-radius: 6px;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+        background: #f9f9f3;
+        padding: 1rem;
+        border-radius: 0.125rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
       }
 
       .card h3 {
-        margin: 0 0 4px 0;
+        margin: 0 0 0.5rem 0; /* 8px -> 0.5rem */
       }
 
       .card p {
-        margin: 8px 0 0;
+        margin: 0.5rem 0 0; /* 8px -> 0.5rem */
         flex-grow: 1;
       }
 
@@ -157,13 +165,12 @@
         text-align: center;
         font-size: 0.9em;
         color: #777;
-        padding: 20px; /* 保留和 header/section 一致的 padding */
-        padding-bottom: 40px; /* 单独加大底部间距 */
-        border-top: 1px dashed rgba(0, 0, 0, 0.1);
+        padding: 1.25rem;
+        padding-bottom: 2.5rem;
       }
 
       .demo-credentials {
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem; /* 20px -> 1.25rem */
         font-size: 0.95em;
       }
 
@@ -173,8 +180,8 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
-        gap: 8px;
-        margin-bottom: 4px;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
       }
       .section-header h2 {
         margin: 0;
@@ -183,12 +190,13 @@
 
       .section-hr {
         border: none;
-        border-top: 1px dashed rgba(0, 0, 0, 0.1);
-        margin: 2px 0 20px 0;
+        border-top: 0.0625rem dashed rgba(0, 0, 0, 0.1); /* 1px -> 0.0625rem */
+        margin: 0.125rem 0 1.25rem 0; /* 2px 20px -> 0.125rem 1.25rem */
         width: 100%;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 48rem) {
+        /* 768px -> 48rem */
         .grid {
           grid-template-columns: 1fr;
         }
@@ -197,39 +205,36 @@
       /* ==== 社交图标 ==== */
       .social-links {
         display: flex;
-        gap: 12px; /* 图标间距 */
-        margin-top: 4px; /* 与标题分开 */
-        /* 使用 align-items: baseline 让图标与文本基线对齐 */
+        gap: 0.75rem; /* 12px -> 0.75rem */
+        margin-top: 0.5rem;
         align-items: baseline;
       }
 
       .social-links img {
-        width: 24px;
-        height: 24px;
-        display: inline-block; /* 保持 baseline 对齐 */
+        width: 1.28125rem; /* 原先写错？20.5rem太大，这里假设20.5px -> 1.28125rem */
+        height: 1.28125rem;
+        display: inline-block;
       }
 
       .social-links a img {
         transition: transform 0.2s ease, filter 0.2s ease;
       }
 
-      /* hover 效果：放大 + 颜色变亮 */
       .social-links a:hover img {
-        transform: scale(1.2); /* 放大 20% */
-        filter: brightness(1.2); /* 亮度增加 20% */
+        transform: scale(1.2);
+        filter: brightness(1.2);
       }
 
       /* ==== 统一按钮样式 ==== */
       .btn-link {
         display: inline-block;
-        padding: 6px 12px;
+        padding: 0.5rem 0.75rem; /* 0.5rem + 12px -> 0.75rem */
         font-weight: bold;
         font-size: 0.95em;
         color: #1a73e8;
         text-decoration: none;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         background-color: rgba(26, 115, 232, 0.1);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         transition: background-color 0.2s, color 0.2s;
         white-space: nowrap;
         flex-grow: 0;
@@ -242,11 +247,11 @@
       }
       .btn-link::after {
         content: " →";
-        margin-left: 4px;
+        margin-left: 0.3125rem; /* 5px -> 0.3125rem */
         font-weight: bold;
       }
       .btn-demo {
-        margin-top: 10px;
+        margin-top: 0.5rem;
       }
     </style>
   </head>
@@ -305,7 +310,7 @@
       <ul>
         <li>
           <span class="label">Frontend:</span>
-          <span>Vue, React, HTML5, CSS3, JavaScript</span>
+          <span>HTML5, CSS3, JavaScript, Bootstrap, Vue, React</span>
         </li>
         <li>
           <span class="label">Backend:</span> <span>PHP, Node.js, Go</span>
@@ -455,40 +460,60 @@
         <h2>Personal Projects</h2>
       </div>
       <hr class="section-hr" />
+
+      <!-- 开发中 -->
+      <h3>In Development</h3>
       <div class="grid">
         <div class="card">
-          <h3>CMS</h3>
+          <h4>Meteorite Admin with Vue</h4>
           <p>
-            General content management system, supporting pages, articles,
-            categories, and user management.
+            Meteorite management system front-end provides complete user
+            management, content management and dashboard functions, supports
+            responsive layout and theme switching, and is suitable for
+            enterprise back-end system demonstrations or rapid project
+            prototyping.
           </p>
+          <ul>
+            <li>Username: admin / Password: 123456</li>
+          </ul>
           <a
-            href="https://cms.hizpark.com/wms"
+            href="https://meteorite-vue.hizpark.com"
             target="_blank"
             class="btn-link btn-demo"
             >View Demo</a
           >
         </div>
-        <!-- <div class="card">
-          <h3>Blog</h3>
+        <div class="card">
+          <h4>Todo List</h4>
           <p>
-            Personal blog system with post publishing and commenting features.
+            A modern task management application built with Vue. Supports
+            creating, editing, completing, and deleting tasks with a responsive
+            interface and local storage for persistence.
           </p>
           <a
-            href="https://blog.hizpark.com"
+            href="https://todo.hizpark.com"
             target="_blank"
             class="btn-link btn-demo"
             >View Demo</a
           >
-        </div> -->
+        </div>
+      </div>
+
+      <!-- 维护中 -->
+      <h3>Maintenance</h3>
+      <div class="grid">
         <div class="card">
-          <h3>Todo List</h3>
+          <h4>CMS</h4>
           <p>
-            Task management app supporting create, read, update, and delete
-            operations.
+            Stable content management system for pages, articles, categories,
+            and user management. Currently in maintenance mode, receiving
+            occasional updates and bug fixes.
           </p>
+          <ul>
+            <li>Username: admin / Password: 123456</li>
+          </ul>
           <a
-            href="https://todo.hizpark.com"
+            href="https://cms.hizpark.com/wms"
             target="_blank"
             class="btn-link btn-demo"
             >View Demo</a
