@@ -41,7 +41,7 @@
     </script>
 
     <style>
-      /* ==== 全局等宽字体 ==== */
+      /* ==== 全局 ==== */
       body {
         font-family: system-ui, -apple-system, "Segoe UI", Roboto,
           "Helvetica Neue", Arial, sans-serif;
@@ -118,10 +118,8 @@
         margin: 0;
       }
 
-      #skills li,
-      #contact li {
+      #skills li {
         margin: 0.5rem 0;
-        font-size: 1.05em;
         font-family: "Courier New", Courier, monospace;
       }
 
@@ -169,9 +167,10 @@
         padding-bottom: 2.5rem;
       }
 
-      .demo-credentials {
+      .credentials {
         margin-bottom: 1.25rem; /* 20px -> 1.25rem */
-        font-size: 0.95em;
+        font-size: 0.75em;
+        font-family: "Courier New", Courier, monospace;
       }
 
       /* Section Header 统一样式 */
@@ -211,7 +210,7 @@
       }
 
       .social-links img {
-        width: 1.28125rem; /* 原先写错？20.5rem太大，这里假设20.5px -> 1.28125rem */
+        width: 1.28125rem;
         height: 1.28125rem;
         display: inline-block;
       }
@@ -422,10 +421,9 @@
         Selected website projects and client work showcasing practical
         experience and expertise in web development.
       </p>
-      <p class="demo-credentials">
-        <strong>Demo Access:</strong> Username: <code>demo</code>, Password:
-        <code>123456</code>
-      </p>
+      <ul class="credentials">
+        <li><strong>access:</strong> username: demo / password: 123456</li>
+      </ul>
       <div class="grid">
         <div class="card">
           <a href="https://b50101-klnwcity.hizpark.com" target="_blank"
@@ -461,6 +459,29 @@
       </div>
       <hr class="section-hr" />
 
+      <!-- 维护中 -->
+      <h3>Maintenance</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>CMS</h4>
+          <p>
+            Stable content management system for pages, articles, categories,
+            and user management. Currently in maintenance mode, receiving
+            occasional updates and bug fixes.
+          </p>
+          <ul class="credentials">
+            <li><strong>access:</strong> username: demo / password: 123456</li>
+            <li><strong>login:</strong> username: admin / password: 123456</li>
+          </ul>
+          <a
+            href="https://cms.hizpark.com/wms"
+            target="_blank"
+            class="btn-link btn-demo"
+            >View Demo</a
+          >
+        </div>
+      </div>
+
       <!-- 开发中 -->
       <h3>In Development</h3>
       <div class="grid">
@@ -473,8 +494,8 @@
             enterprise back-end system demonstrations or rapid project
             prototyping.
           </p>
-          <ul>
-            <li>Username: admin / Password: 123456</li>
+          <ul class="credentials">
+            <li><strong>login:</strong> username: admin / password: 123456</li>
           </ul>
           <a
             href="https://meteorite-vue.hizpark.com"
@@ -500,28 +521,6 @@
           >
         </div>
       </div>
-
-      <!-- 维护中 -->
-      <h3>Maintenance</h3>
-      <div class="grid">
-        <div class="card">
-          <h4>CMS</h4>
-          <p>
-            Stable content management system for pages, articles, categories,
-            and user management. Currently in maintenance mode, receiving
-            occasional updates and bug fixes.
-          </p>
-          <ul>
-            <li>Username: admin / Password: 123456</li>
-          </ul>
-          <a
-            href="https://cms.hizpark.com/wms"
-            target="_blank"
-            class="btn-link btn-demo"
-            >View Demo</a
-          >
-        </div>
-      </div>
     </section>
 
     <!-- Contact -->
@@ -530,7 +529,9 @@
       <ul>
         <li>
           <span class="label">Email:</span>
-          <a href="mailto:harper.jang@outlook.com">harper.jang@outlook.com</a>
+          <a href="mailto:harper.jang@outlook.com">
+            <code>harper.jang@outlook.com</code>
+          </a>
         </li>
       </ul>
     </section>
